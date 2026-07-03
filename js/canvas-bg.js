@@ -155,6 +155,8 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     const speakingCanvas = document.getElementById('speaking-canvas');
+
+    if (speakingCanvas) {
       const speakingNetwork = new ParticleNetwork(speakingCanvas, {
         particleCount: 40,
         connectionDistance: 120,
