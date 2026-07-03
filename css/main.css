@@ -811,6 +811,29 @@ address { font-style: normal; }
 
 .book-card:hover { transform: translateY(-8px); }
 
+.book-cover-link {
+  display: block;
+  max-width: 240px;
+  margin: 0 auto 24px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.book-cover-link:hover {
+  box-shadow: 0 16px 40px rgba(26, 26, 26, 0.18);
+  transform: scale(1.02);
+}
+
+.book-cover-img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  display: block;
+  background: var(--cream-dark);
+}
+
 .book-cover {
   aspect-ratio: 2/3;
   max-height: 320px;
