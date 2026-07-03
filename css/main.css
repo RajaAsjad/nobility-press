@@ -419,14 +419,6 @@ address { font-style: normal; }
   z-index: 0;
 }
 
-.hero-canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
-}
 
 .hero-overlay {
   position: absolute;
@@ -444,13 +436,13 @@ address { font-style: normal; }
       rgba(74, 18, 24, 0.55) 0%,
       transparent 35%
     );
-  z-index: 3;
+  z-index: 2;
   pointer-events: none;
 }
 
 .hero-content {
   position: relative;
-  z-index: 4;
+  z-index: 3;
   width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
