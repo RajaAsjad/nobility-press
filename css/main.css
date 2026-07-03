@@ -408,7 +408,7 @@ address { font-style: normal; }
   inset: 0;
   background-image: url('../assets/images/hero-banner.png');
   background-size: cover;
-  background-position: center top;
+  background-position: center center;
   background-repeat: no-repeat;
   z-index: 0;
 }
@@ -427,10 +427,9 @@ address { font-style: normal; }
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(250, 247, 242, 0.92) 0%,
-    rgba(250, 247, 242, 0.25) 40%,
-    rgba(250, 247, 242, 0.02) 75%,
-    transparent 100%
+    rgba(250, 247, 242, 0.88) 0%,
+    rgba(250, 247, 242, 0.15) 28%,
+    transparent 55%
   );
   z-index: 3;
   pointer-events: none;
@@ -1146,7 +1145,8 @@ address { font-style: normal; }
   .hero-content { padding-bottom: 32px; }
 
   .hero-bg {
-    background-position: center center;
+    background-position: center top;
+    background-size: cover;
   }
 
   .about-stats { grid-template-columns: repeat(3, 1fr); }
