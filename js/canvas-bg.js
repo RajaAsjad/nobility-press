@@ -154,34 +154,7 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
-    const heroCanvas = document.getElementById('hero-canvas');
     const speakingCanvas = document.getElementById('speaking-canvas');
-
-    if (heroCanvas) {
-      const heroNetwork = new ParticleNetwork(heroCanvas, {
-        particleCount: 90,
-        connectionDistance: 160,
-        particleColor: 'rgba(201, 168, 76, 0.7)',
-        lineColor: 'rgba(201, 168, 76, 0.1)',
-        speed: 0.25,
-        interactive: true
-      });
-
-      const observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            heroNetwork.start();
-          } else {
-            heroNetwork.stop();
-          }
-        });
-      }, { threshold: 0.1 });
-
-      observer.observe(heroCanvas.closest('.hero'));
-      heroNetwork.start();
-    }
-
-    if (speakingCanvas) {
       const speakingNetwork = new ParticleNetwork(speakingCanvas, {
         particleCount: 40,
         connectionDistance: 120,
