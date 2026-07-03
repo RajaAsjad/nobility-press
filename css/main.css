@@ -100,17 +100,15 @@ address { font-style: normal; }
 }
 
 .preloader-logo {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 3rem);
-  color: var(--white);
   margin-bottom: 2rem;
-  letter-spacing: 0.02em;
 }
 
-.logo-n {
-  font-weight: 700;
-  font-size: 1.3em;
-  color: var(--gold);
+.preloader-logo-img {
+  width: clamp(120px, 22vw, 160px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: brightness(1.15);
 }
 
 .preloader-bar {
@@ -172,38 +170,28 @@ address { font-style: normal; }
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: var(--maroon);
-  transition: color var(--transition);
+  flex-shrink: 0;
+  transition: opacity var(--transition), transform var(--transition);
 }
 
-.header.scrolled .logo { color: var(--maroon); }
-
-.logo-mark {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: var(--maroon);
-  color: var(--white);
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 0.85rem;
-  border-radius: 8px;
-  letter-spacing: -0.02em;
+.logo:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
 }
 
-.header.scrolled .logo-mark {
-  background: var(--maroon);
+.logo-img {
+  height: 58px;
+  width: auto;
+  max-width: min(200px, 42vw);
+  object-fit: contain;
+  display: block;
 }
 
-.logo-name {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  letter-spacing: 0.01em;
+@media (max-width: 768px) {
+  .logo-img {
+    height: 48px;
+    max-width: 150px;
+  }
 }
 
 .nav-desktop {
@@ -329,11 +317,12 @@ address { font-style: normal; }
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.mobile-menu-brand {
-  font-family: var(--font-display);
-  font-size: 1.4rem;
-  color: var(--white);
-  font-weight: 600;
+.mobile-menu-logo {
+  height: 52px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  filter: brightness(1.2);
 }
 
 .mobile-menu-list {
@@ -419,7 +408,7 @@ address { font-style: normal; }
   width: 100%;
   height: 100%;
   z-index: 2;
-  pointer-events: auto;
+  pointer-events: none;
 }
 
 .hero-overlay {
@@ -427,9 +416,9 @@ address { font-style: normal; }
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(250, 247, 242, 0.88) 0%,
-    rgba(250, 247, 242, 0.15) 28%,
-    transparent 55%
+    rgba(250, 247, 242, 0.85) 0%,
+    rgba(250, 247, 242, 0.08) 30%,
+    transparent 60%
   );
   z-index: 3;
   pointer-events: none;
@@ -1066,16 +1055,17 @@ address { font-style: normal; }
 .footer-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  color: var(--white);
+  justify-content: center;
 }
 
-.footer-brand .logo-mark {
-  width: 36px;
-  height: 36px;
-  font-size: 0.75rem;
+.footer-logo {
+  height: 64px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 8px 14px;
+  border-radius: 10px;
 }
 
 .footer-nav {
